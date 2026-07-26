@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sysfleet Tech Solutions — AI Automation &amp; Custom Software</title>
+<meta name="description" content="Sysfleet Tech Solutions builds AI automation, RPA and custom software for government agencies and regulated industries. Based in Lynchburg, Virginia.">
+<link rel="canonical" href="https://sysfleettech.com/">
+<meta name="theme-color" content="#0b2545">
+<meta name="robots" content="index, follow">
+
+<!-- Icons -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Social share card -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sysfleet Tech Solutions">
+<meta property="og:url" content="https://sysfleettech.com/">
+<meta property="og:title" content="Sysfleet Tech Solutions — AI Automation &amp; Custom Software">
+<meta property="og:description" content="Enterprise RPA, AI workflow automation and systems integration for government and regulated industries.">
+<meta property="og:image" content="https://sysfleettech.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sysfleet Tech Solutions — AI Automation &amp; Custom Software">
+<meta name="twitter:description" content="Enterprise RPA, AI workflow automation and systems integration for government and regulated industries.">
+<meta name="twitter:image" content="https://sysfleettech.com/og-image.jpg">
+
+<!-- Business listing data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Sysfleet Tech Solutions",
+  "url": "https://sysfleettech.com/",
+  "image": "https://sysfleettech.com/og-image.jpg",
+  "description": "Enterprise RPA, AI workflow automation, custom software development and systems integration for government agencies and regulated industries.",
+  "email": "contactus@sysfleets.com",
+  "telephone": "+1-540-986-8713",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "403, 5th Street",
+    "addressLocality": "Lynchburg",
+    "addressRegion": "VA",
+    "postalCode": "24504",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Sam Timothy",
+    "jobTitle": "Founder & Principal Consultant"
+  },
+  "areaServed": "US",
+  "knowsAbout": ["Robotic Process Automation","AI workflow automation","Microsoft Power Platform","Systems integration","Custom software development"]
+}
+</script>
+<style>
+:root{
+  --navy:#0b2545;
+  --navy-2:#13315c;
+  --blue:#1e6fd9;
+  --blue-soft:#e8f1fd;
+  --ink:#16202e;
+  --muted:#5b6b7f;
+  --line:#e3e9f0;
+  --bg:#ffffff;
+  --bg-alt:#eef3fa;   /* tint 1 — cool grey-blue */
+  --bg-tint:#f4f7fc;  /* tint 2 — lighter, for the founder band */
+  --radius:14px;
+  --max:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  /* System font stack — no external font request, so no extra latency
+     and no visitor data sent to a third-party font host. */
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+
+/* Keyboard users: jump straight past the nav */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--blue);color:#fff;
+  padding:12px 20px;border-radius:0 0 10px 0;font-weight:650;font-size:.92rem}
+.skip:focus{left:0}
+
+/* Respect the OS "reduce motion" setting */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .card:hover,.btn-primary:hover,.socials a:hover{transform:none}
+}
+
+/* Visible focus ring for keyboard navigation */
+a:focus-visible,button:focus-visible,input:focus-visible,
+select:focus-visible,textarea:focus-visible{
+  outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+
+/* Inline SVG icons inherit colour and size from their container */
+.ic svg,.tick svg{width:1.15em;height:1.15em;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em;color:var(--navy)}
+h1{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:750}
+h3{font-size:1.12rem;font-weight:700}
+p{color:var(--muted)}
+section{padding:88px 0}
+.alt{border-top:1px solid var(--line);border-bottom:1px solid var(--line)} /* background set below */
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:1.12rem;letter-spacing:-.02em}
+.logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--navy));display:grid;place-items:center;color:#fff;font-size:.85rem;font-weight:800}
+.logo small{display:block;font-size:.62rem;font-weight:600;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;line-height:1}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:.93rem;font-weight:550;color:#3d4b5c}
+.nav-links a:hover{color:var(--blue)}
+/* Button inside the nav must keep its own colours — these selectors need to
+   out-specify ".nav-links a" above, which would otherwise win. */
+.nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#fff}
+.nav-links a.btn-ghost{color:var(--navy)}
+.nav-links a.btn-ghost:hover{color:var(--blue)}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:650;font-size:.94rem;transition:.18s;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(30,111,217,.24)}
+.btn-primary:hover{background:#1a5fbb;transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--navy);background:#fff}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+
+/* Hero */
+.hero{padding:96px 0 84px;background:
+  radial-gradient(900px 400px at 78% -8%,rgba(30,111,217,.10),transparent 60%),
+  linear-gradient(180deg,#fbfdff,#ffffff)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+.eyebrow{display:inline-block;background:var(--blue-soft);color:var(--blue);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:22px}
+.hero p.lead{font-size:1.13rem;margin:22px 0 32px;max-width:34em}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+/* Hero card */
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 22px 50px -22px rgba(11,37,69,.28);overflow:hidden}
+.panel-top{background:var(--navy);padding:14px 18px;display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.28)}
+.panel-top span{margin-left:10px;color:rgba(255,255,255,.72);font-size:.78rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.panel-body{padding:22px}
+.flow{display:flex;flex-direction:column;gap:12px}
+.flow-item{display:flex;align-items:center;gap:13px;padding:13px 15px;border:1px solid var(--line);border-radius:11px;background:#fcfdff}
+.flow-item .ic{width:34px;height:34px;flex:0 0 34px;border-radius:9px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:1rem}
+.flow-item b{font-size:.92rem;color:var(--navy);display:block}
+.flow-item small{font-size:.79rem;color:var(--muted)}
+.flow-arrow{text-align:center;color:#b9c6d6;font-size:.9rem;line-height:1}
+.tag-ok{margin-left:auto;font-size:.7rem;font-weight:700;color:#0f7a48;background:#e6f7ee;padding:4px 9px;border-radius:99px;white-space:nowrap}
+
+/* Sections */
+.head{max-width:660px;margin-bottom:52px}
+.head p{margin-top:14px;font-size:1.04rem}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:.2s}
+.card:hover{border-color:#c9dcf5;box-shadow:0 16px 34px -20px rgba(11,37,69,.3);transform:translateY(-3px)}
+.card .ic{width:46px;height:46px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;margin-bottom:18px}
+.card p{margin-top:10px;font-size:.95rem}
+.card ul{margin-top:16px;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.card ul li{font-size:.78rem;font-weight:600;color:var(--navy-2);background:#f1f5fa;border:1px solid var(--line);padding:5px 11px;border-radius:99px}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{position:relative;padding-top:26px;border-top:3px solid var(--line)}
+.step:before{counter-increment:s;content:"0" counter(s);position:absolute;top:-3px;left:0;border-top:3px solid var(--blue);padding-top:26px;font-size:.8rem;font-weight:800;color:var(--blue);letter-spacing:.08em}
+.step h3{margin:22px 0 8px}
+.step p{font-size:.92rem}
+
+/* Why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.check{list-style:none;display:flex;flex-direction:column;gap:20px}
+.check li{display:flex;gap:14px}
+.check .tick{flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:800;margin-top:2px}
+.check b{display:block;color:var(--navy);font-size:1rem}
+.check span{font-size:.94rem;color:var(--muted)}
+
+/* Brand texture — inline SVG, ~400 bytes, no extra HTTP request.
+   A faint node-and-path lattice echoing the workflow diagram in the hero. */
+.contact{
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.055' stroke-width='1'%3E%3Cpath d='M0 30h120M0 90h120M30 0v120M90 0v120'/%3E%3Cpath d='M30 30 90 90M90 30 30 90'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.085'%3E%3Ccircle cx='30' cy='30' r='2.4'/%3E%3Ccircle cx='90' cy='30' r='2.4'/%3E%3Ccircle cx='30' cy='90' r='2.4'/%3E%3Ccircle cx='90' cy='90' r='2.4'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(700px 380px at 88% 4%,rgba(30,111,217,.30),transparent 62%),
+    linear-gradient(135deg,var(--navy),var(--navy-2));
+  color:#fff}
+
+/* Same lattice, inverted, on the tinted alternating sections.
+   A soft vertical gradient stops the tint reading as a flat grey slab. */
+.alt{
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%230b2545' stroke-opacity='0.045' stroke-width='1'%3E%3Cpath d='M0 30h120M0 90h120M30 0v120M90 0v120'/%3E%3C/g%3E%3Cg fill='%231e6fd9' fill-opacity='0.09'%3E%3Ccircle cx='30' cy='30' r='2.2'/%3E%3Ccircle cx='90' cy='90' r='2.2'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg,#f3f7fc 0%,var(--bg-alt) 55%,#e9f0f8 100%)}
+
+/* Founder gets its own lighter band so three consecutive sections
+   don't read as white / grey / white / grey and blur together. */
+#founder{
+  background:
+    radial-gradient(620px 340px at 12% 0%,rgba(30,111,217,.07),transparent 60%),
+    linear-gradient(180deg,#fff 0%,var(--bg-tint) 100%);
+  border-top:1px solid var(--line)}
+
+/* Hairline accent along the top edge of each tinted band — a crisp edge reads
+   as a deliberate section break rather than a colour that drifted. */
+.alt,#founder,.contact{position:relative}
+.alt::before,#founder::before,.contact::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--blue),rgba(30,111,217,.14) 38%,transparent 72%)}
+.contact h2,.contact h3{color:#fff}
+.contact p{color:rgba(255,255,255,.76)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.info{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.info li{display:flex;gap:13px;align-items:flex-start;font-size:.95rem;color:rgba(255,255,255,.85)}
+.info .ic{width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:rgba(255,255,255,.1);display:grid;place-items:center}
+form{background:#fff;border-radius:16px;padding:30px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.84rem;font-weight:650;color:var(--navy);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:.94rem;color:var(--ink);background:#fcfdff;transition:.15s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,111,217,.13);background:#fff}
+.field textarea{resize:vertical;min-height:110px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn-primary{width:100%;border:0;font-size:1rem;padding:14px}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:14px}
+.msg{display:none;margin-top:16px;padding:13px 15px;border-radius:10px;background:#e6f7ee;color:#0f7a48;font-size:.9rem;font-weight:600;text-align:center}
+
+/* Footer */
+footer{background:#071a33;color:rgba(255,255,255,.6);padding:52px 0 30px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .logo{color:#fff}
+footer h4{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer a:hover{color:#fff}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem}
+footer p{color:rgba(255,255,255,.55);font-size:.92rem;margin-top:14px;max-width:32em}
+/* FILL-IN markers — replace every one of these before publishing */
+.todo{background:#fff4d6;border:1px dashed #d99b1e;color:#7a5200;padding:2px 8px;border-radius:6px;font-size:.85em;font-weight:650;display:inline-block}
+
+/* Founder */
+.founder{display:grid;grid-template-columns:.72fr 1.28fr;gap:56px;align-items:start}
+.portrait{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:16px;border:1px solid var(--line);display:block;box-shadow:0 18px 40px -24px rgba(11,37,69,.45)}
+.founder h3{margin-bottom:4px}
+.founder .role{color:var(--blue);font-weight:650;font-size:.95rem;margin-bottom:18px}
+.creds{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.creds li{display:flex;gap:11px;font-size:.94rem;color:var(--muted)}
+.creds .tick{flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:.68rem;font-weight:800;margin-top:4px}
+
+/* Case studies */
+.case{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column}
+.case .sector{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.case .metrics{display:flex;gap:26px;margin:20px 0;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.case .metrics div strong{display:block;font-size:1.35rem;color:var(--navy);font-weight:800}
+.case .metrics div span{font-size:.78rem;color:var(--muted)}
+.case blockquote{font-size:.92rem;color:var(--muted);font-style:italic;border-left:3px solid var(--blue-soft);padding-left:14px;margin-top:auto}
+.case cite{display:block;font-style:normal;font-size:.82rem;font-weight:650;color:var(--navy);margin-top:9px}
+
+/* Recognition */
+.rec{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.rec h3{font-size:1rem;margin-bottom:14px}
+.rec ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.rec ul li{font-size:.91rem;color:var(--muted);padding-left:16px;position:relative}
+.rec ul li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.rec a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+
+.socials{flex-direction:row!important;gap:10px!important;margin-top:22px}
+.socials a{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.72);transition:.18s}
+.socials a:hover{background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-2px)}
+
+@media(max-width:900px){
+  .hero-grid,.why,.founder,.contact-grid,.grid-3,.grid-2,.steps,.foot-grid{grid-template-columns:1fr}
+  .portrait{max-width:320px;margin:0 auto}
+  .steps{gap:30px}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:10px 24px 20px;border-bottom:1px solid var(--line);box-shadow:0 14px 26px -18px rgba(11,37,69,.4)}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;padding:12px 0;border-bottom:1px solid var(--line)}
+  .nav-links .btn{width:100%;text-align:center;margin-top:10px;border-bottom:0}
+  .menu-btn{display:block}
+  section{padding:64px 0}
+  .row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#services">Skip to main content</a>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="mark">SF</span>
+      <span>Sysfleet<small>Tech Solutions</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#work">Results</a>
+      <a href="#founder">Founder</a>
+      <a href="#recognition">Credentials</a>
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">AI Automation &amp; Custom Software</span>
+      <h1>Automate the busywork.<br>Build the software that scales you.</h1>
+      <p class="lead">Sysfleet Tech Solutions designs AI-powered automation and custom applications that cut manual hours, remove costly errors, and give your team systems that actually fit how you work.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get a Free Automation Audit</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="panel" aria-hidden="true">
+      <div class="panel-top">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span>sysfleet — workflow.run</span>
+      </div>
+      <div class="panel-body">
+        <div class="flow">
+          <div class="flow-item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><b>Intake received</b><small>Email, form &amp; document parsing</small></span>
+          </div>
+          <div class="flow-arrow">&#8595;</div>
+          <div class="flow-item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.2v2.4M12 19.4v2.4M2.2 12h2.4M19.4 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7"/></svg></span>
+            <span><b>AI extraction &amp; routing</b><small>Classify, validate, assign owner</small></span>
+          </div>
+          <div class="flow-arrow">&#8595;</div>
+          <div class="flow-item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h13l-3.5-3.5M21 16H8l3.5 3.5"/></svg></span>
+            <span><b>Synced to your systems</b><small>CRM, ERP, accounting, database</small></span>
+          </div>
+          <div class="flow-arrow">&#8595;</div>
+          <div class="flow-item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="m8 12.4 2.7 2.7L16 9.6"/></svg></span>
+            <span><b>Team notified</b><small>Zero manual data entry</small></span>
+            <span class="tag-ok">Live</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>What we build</h2>
+      <p>Two disciplines, one outcome: technology that removes friction from your operations instead of adding to it.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3.4M12 17.6V21M3 12h3.4M17.6 12H21M5.6 5.6l2.4 2.4M16 16l2.4 2.4M18.4 5.6 16 8M8 16l-2.4 2.4"/><circle cx="12" cy="12" r="2.7"/></svg></div>
+        <h3>AI Workflow Automation</h3>
+        <p>We map your repetitive processes and replace them with intelligent workflows — document processing, data entry, routing, reporting and follow-ups that run without a human in the loop.</p>
+        <ul><li>Document &amp; invoice processing</li><li>Data entry elimination</li><li>Approval workflows</li><li>Automated reporting</li></ul>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12.3a7.7 7.7 0 0 1-8.3 7.7 8.6 8.6 0 0 1-2.7-.5L4.5 21l1.5-4.4a7.7 7.7 0 0 1-1.5-4.6 7.7 7.7 0 0 1 8-7.7 7.7 7.7 0 0 1 8 8z"/></svg></div>
+        <h3>AI Agents &amp; Assistants</h3>
+        <p>Custom assistants trained on your own documentation, policies and data — answering customer questions, supporting your staff, and handling first-line requests around the clock.</p>
+        <ul><li>Customer support agents</li><li>Internal knowledge search</li><li>Lead qualification</li><li>RAG &amp; private data</li></ul>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/></svg></div>
+        <h3>Custom Software Development</h3>
+        <p>Web and mobile applications built around your process rather than forcing your process into off-the-shelf software. Clean architecture, documented code, fully yours.</p>
+        <ul><li>Web applications</li><li>Internal tools &amp; portals</li><li>Mobile apps</li><li>Dashboards</li></ul>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h13l-3.5-3.5M21 16H8l3.5 3.5"/></svg></div>
+        <h3>Systems Integration</h3>
+        <p>Your tools should talk to each other. We connect CRMs, ERPs, accounting platforms and legacy systems into a single reliable flow of data — no more copy-paste between tabs.</p>
+        <ul><li>API development</li><li>Third-party integrations</li><li>Data migration</li><li>Legacy modernisation</li></ul>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 18.5H7a4.5 4.5 0 0 1-.6-8.96 6 6 0 0 1 11.5 1.7 3.6 3.6 0 0 1-.4 7.26z"/></svg></div>
+        <h3>Cloud &amp; Deployment</h3>
+        <p>Secure, scalable hosting with monitoring and backups in place from day one — so what we build stays fast, available and safe as your usage grows.</p>
+        <ul><li>Cloud architecture</li><li>CI/CD pipelines</li><li>Monitoring &amp; backups</li><li>Cost optimisation</li></ul>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20.5h18M6.5 17V11M11 17V6.5M15.5 17v-7M20 17V8"/></svg></div>
+        <h3>Consulting &amp; Strategy</h3>
+        <p>Not sure where automation pays off first? We audit your operations, quantify the time and cost at stake, and give you a prioritised roadmap — whether or not you build it with us.</p>
+        <ul><li>Automation audit</li><li>Technical roadmap</li><li>Build vs. buy analysis</li><li>Team training</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="alt" id="process">
+  <div class="wrap">
+    <div class="head">
+      <h2>How we work</h2>
+      <p>A clear, low-risk path from first conversation to a system running in production.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Discover</h3>
+        <p>We sit with your team, map the current process end to end, and identify where time and money are actually being lost.</p>
+      </div>
+      <div class="step">
+        <h3>Design</h3>
+        <p>You get a written scope: what gets built, the expected impact, the timeline, and a fixed price. No open-ended billing.</p>
+      </div>
+      <div class="step">
+        <h3>Build</h3>
+        <p>Short delivery cycles with working demos throughout, so you see progress and steer direction before anything is locked in.</p>
+      </div>
+      <div class="step">
+        <h3>Support</h3>
+        <p>We deploy, train your team, monitor performance, and stay on for improvements as the business changes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap why">
+    <div>
+      <h2>Why teams choose Sysfleet</h2>
+      <p style="margin-top:16px;font-size:1.04rem">We're a small, senior team. You work directly with the people writing the code — no account managers, no offshore handoffs, no surprises on the invoice.</p>
+      <a href="#contact" class="btn btn-primary" style="margin-top:28px">Talk to an Engineer</a>
+    </div>
+    <ul class="check">
+      <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Business outcomes, not buzzwords</b><span>Every project starts with the hours or revenue at stake. If automation isn't the answer, we'll tell you.</span></span></li>
+      <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>You own everything</b><span>Source code, infrastructure and documentation are handed over in full. No lock-in, no hostage licensing.</span></span></li>
+      <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Fixed scope, fixed price</b><span>You approve a clear scope and cost before development begins, so budgets stay predictable.</span></span></li>
+      <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Security by default</b><span>Encrypted data, least-privilege access and audit logging built in — not bolted on later.</span></span></li>
+      <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Support that doesn't disappear</b><span>Post-launch monitoring and an agreed response window written into your contract. We stay accountable for what we ship.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     WORK — ANONYMISED
+     No client names, no logos, no attributed quotes. Describe the
+     client only by sector and rough size. This avoids confidentiality
+     and publicity-clause problems in most client contracts.
+     Keep the NAMED, signed version of each engagement in your private
+     evidence folder — that is what carries weight in a petition,
+     and it never needs to be published.
+     ============================================================ -->
+<section class="alt" id="work">
+  <div class="wrap">
+    <div class="head">
+      <h2>Selected work</h2>
+      <p>Client details are withheld under confidentiality agreements. References and detailed scope are available on request.</p>
+    </div>
+    <div class="grid-2">
+      <div class="case">
+        <span class="sector">Public-sector housing finance agency</span>
+        <h3>Automating mortgage origination and external lender integration</h3>
+        <p>A quasi-governmental housing finance agency was processing mortgage applications through a workflow that depended on manual data entry and re-keying between its own loan systems and those of an external banking partner. We designed and delivered robotic process automation with AI-based document and data handling to automate the origination steps, and built a systems integration that moved information between the partner bank and the agency's internal processes without human intervention.</p>
+        <!-- Metrics intentionally omitted. To add them later, use:
+             <div class="metrics">
+               <div><strong>000</strong><span>Label</span></div>
+             </div>
+             Only publish figures you can document. -->
+        <blockquote>Regulated public-sector environment. Detailed references available on request under NDA.</blockquote>
+      </div>
+      <div class="case">
+        <span class="sector">Multinational apparel &amp; consumer goods manufacturer</span>
+        <h3>Retail partner integration through a large-scale corporate consolidation</h3>
+        <p>Following the consolidation of two major manufacturing businesses, order and fulfilment data for the combined group's national retail accounts was running across separate, incompatible systems. We built RPA and AI automation to integrate those flows with the retailers' platforms, unifying the way orders, inventory and fulfilment data moved between the manufacturer and several of the largest retail chains in North America.</p>
+        <!-- Metrics intentionally omitted — add only documented figures. -->
+        <blockquote>Delivered during an active post-merger integration across multiple business units.</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOUNDER
+     ============================================================ -->
+<section id="founder">
+  <div class="wrap founder">
+    <picture>
+      <source srcset="founder.webp" type="image/webp">
+      <img class="portrait" src="founder.jpg" width="900" height="1350" loading="lazy" decoding="async"
+           alt="Sam Timothy, Founder and Principal Consultant at Sysfleet Tech Solutions">
+    </picture>
+    <div>
+      <h3>Sam Timothy</h3>
+      <div class="role">Founder &amp; Principal Consultant, Sysfleet Tech Solutions</div>
+      <p>Sam Timothy is a Systems Architect with more than a decade of experience delivering enterprise automation, AI, and cross-platform integration solutions across government, healthcare, financial services, and manufacturing. He has led distributed delivery teams across the United States, Canada, South America, and India. His recent engagements include enterprise RPA and AI modernization for a state housing finance authority, health data workflow automation for a state public health department, and a large-scale RPA platform migration for a multinational apparel manufacturer.</p>
+      <ul class="creds">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Education</b> — M.S., Information Systems Engineering &amp; Management, Harrisburg University of Science and Technology, Harrisburg, Pennsylvania, USA (2025)</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Certifications</b> — MIT No-Code AI &amp; Machine Learning (2024); Lean Green Belt, Institute of Industrial and Systems Engineers (2024); Professional Scrum Master™ I (2019); Certified Blockchain Expert (2019); ISO/IEC 27001 ISMS Lead Auditor (2018); ITIL® Foundation (2018)</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RECOGNITION, PUBLICATIONS & SPEAKING
+     Third-party items only. Each entry should link to a source
+     that exists independently of this website.
+     ============================================================ -->
+<section class="alt" id="recognition">
+  <div class="wrap">
+    <div class="head">
+      <h2>Research, writing &amp; recognition</h2>
+      <p>Published research, contributed industry writing, and professional recognition — each linked to its original source.</p>
+    </div>
+    <div class="grid-3">
+      <div class="rec">
+        <h3>Research &amp; published frameworks</h3>
+        <ul>
+          <li><a href="https://doi.org/10.5281/zenodo.17585237" target="_blank" rel="noopener">Zero-Trust Data Synchronization: A Systems Approach for SharePoint Bulk Updates Under Minimal Permissions</a>. Zenodo, 2025. DOI 10.5281/zenodo.17585237.</li>
+          <li><a href="https://github.com/samt-source/PowerAutomateDesktop-WhitePapers/tree/main/EnvDetection-Framework" target="_blank" rel="noopener">Environment Detection Framework — Power Automate Desktop</a>. Conceptualised and authored.</li>
+          <li><a href="https://github.com/samt-source/ZeroTrust-SharePoint-DataSync" target="_blank" rel="noopener">Zero Trust SharePoint Data Sync Architecture</a>. Designed and published.</li>
+          <li><a href="https://github.com/samt-source/governance-first-authorization-architecture-for-microsoft-power-pages" target="_blank" rel="noopener">Governance-First Authorization Architecture — Microsoft Power Pages</a>. Developed and documented.</li>
+        </ul>
+      </div>
+      <div class="rec">
+        <h3>Contributed writing &amp; features</h3>
+        <ul>
+          <li><a href="https://www.techstoriess.com/zero-trust-gaps-why-rest-graph-power-automate-fail/" target="_blank" rel="noopener">Zero-Trust Gaps: Why REST, Graph &amp; Power Automate Fail</a>. TechStoriess, July 2026.</li>
+          <li><a href="https://www.carahsoft.com/blog/enabling-rapid-compliance-with-sysfleets-rpa-tools-sysfleet-blog-2025" target="_blank" rel="noopener">Enabling Rapid Compliance with Sysfleet's RPA Tools</a>. Carahsoft, October 2025.</li>
+          <li><a href="https://techbullion.com/sam-timothy-transforming-industries-through-visionary-leadership-and-technological-innovation/" target="_blank" rel="noopener">Transforming Industries Through Leadership and Technological Innovation</a>. TechBullion, July 2024.</li>
+        </ul>
+      </div>
+      <div class="rec">
+        <h3>Speaking, awards &amp; professional roles</h3>
+        <ul>
+          <li><a href="https://podcasts.apple.com/us/podcast/the-future-of-business-strategy-is-systems/id1768085090?i=1000758289238" target="_blank" rel="noopener">The Future of Business Strategy is Systems Thinking</a> — guest expert, <em>Tomorrowist</em> (SHRM), March 2026.</li>
+          <li><a href="https://claroawards.com/featured-winner/sam-timothy" target="_blank" rel="noopener">Claro Awards</a> — featured winner, global recognition in AI, technology and data analytics.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Let's find your first automation win</h2>
+      <p style="margin-top:16px;font-size:1.05rem">Tell us what's slowing your team down. We'll come back within one business day with an honest assessment of what can be automated, what it would take, and what it's worth.</p>
+      <ul class="info">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span><span><b style="color:#fff">Email</b><br><a href="mailto:contactus@sysfleets.com" style="text-decoration:underline;text-underline-offset:3px">contactus@sysfleets.com</a></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L7.6 9.5a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.8 2.05z"/></svg></span><span><b style="color:#fff">Phone</b><br><a href="tel:+15409868713" style="text-decoration:underline;text-underline-offset:3px">+1 (540) 986-8713</a></span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.6V12l3.6 2.1"/></svg></span><span><b style="color:#fff">Hours</b><br>Monday – Friday, 8:00 am – 5:00 pm</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.4c0 6-8 12.1-8 12.1s-8-6.1-8-12.1a8 8 0 0 1 16 0z"/><circle cx="12" cy="10.2" r="2.9"/></svg></span><span><b style="color:#fff">Office</b><br>403, 5th Street<br>Lynchburg, VA 24504</span></li>
+      </ul>
+    </div>
+
+    <!-- ============================================================
+         FORM DELIVERY — Web3Forms
+         Submissions are relayed to samt@sysfleets.com.
+         Manage the form and view stored submissions at app.web3forms.com
+         The access key below is public-safe: it only permits sending
+         to the verified address, and cannot be used to read anything.
+         ============================================================ -->
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="958e0577-46f5-40da-b152-625242c62a07">
+      <input type="hidden" name="subject" value="New enquiry from sysfleettech.com">
+      <input type="hidden" name="from_name" value="Sysfleet website">
+      <!-- honeypot: hidden from humans, catches bots -->
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <h3 style="color:var(--navy);margin-bottom:6px">Request a free consultation</h3>
+      <p style="font-size:.9rem;margin-bottom:22px">No cost, no obligation.</p>
+      <div class="row">
+        <div class="field">
+          <label for="name">Full name *</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Doe">
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Acme Ltd">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="email">Work email *</label>
+          <input type="email" id="email" name="email" required placeholder="jane@company.com">
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 555 000 1234">
+        </div>
+      </div>
+      <div class="field">
+        <label for="interest">What do you need?</label>
+        <select id="interest" name="interest">
+          <option>AI workflow automation</option>
+          <option>AI agent or assistant</option>
+          <option>Custom software development</option>
+          <option>Systems integration</option>
+          <option>Cloud &amp; deployment</option>
+          <option>Not sure yet — need advice</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Tell us about the process you'd like to fix *</label>
+        <textarea id="message" name="message" required placeholder="e.g. Our team manually enters ~200 supplier invoices a month into our accounting system..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Request</button>
+      <div class="msg" id="formMsg">Thanks — your request has been received. We'll be in touch within one business day.</div>
+      <p class="form-note">We reply within one business day. Your details are never shared.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="mark">SF</span><span>Sysfleet<small>Tech Solutions</small></span></a>
+        <p>AI automation and custom software for businesses that have outgrown spreadsheets and manual processes.</p>
+        <ul class="socials" aria-label="Sysfleet on social media">
+          <li><a href="https://www.linkedin.com/company/sysfleet" target="_blank" rel="noopener" aria-label="Sysfleet on LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4V9z"/></svg>
+          </a></li>
+          <li><a href="https://x.com/sysfleet" target="_blank" rel="noopener" aria-label="Sysfleet on X" title="X (Twitter)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.53 3H20.5l-6.49 7.41L21.75 21h-5.9l-4.62-6.04L5.94 21H2.96l6.94-7.93L2.5 3h6.05l4.18 5.52L17.53 3zm-1.04 16.2h1.65L7.6 4.71H5.83l10.66 14.49z"/></svg>
+          </a></li>
+          <li><a href="https://github.com/sysfleet" target="_blank" rel="noopener" aria-label="Sysfleet on GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49l-.01-1.72c-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.02-2.75-.1-.26-.44-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.54 1.41.2 2.45.1 2.71.64.72 1.02 1.63 1.02 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a></li>
+          <li><a href="https://www.instagram.com/sysfleet" target="_blank" rel="noopener" aria-label="Sysfleet on Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.29a6.55 6.55 0 1 0 0 13.1 6.55 6.55 0 0 0 0-13.1zm0 10.8a4.25 4.25 0 1 1 0-8.5 4.25 4.25 0 0 1 0 8.5zm8.34-11.06a1.53 1.53 0 1 1-3.06 0 1.53 1.53 0 0 1 3.06 0z"/></svg>
+          </a></li>
+          <li><a href="https://www.youtube.com/@sysfleet" target="_blank" rel="noopener" aria-label="Sysfleet on YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          </a></li>
+          <li><a href="https://www.facebook.com/sysfleet" target="_blank" rel="noopener" aria-label="Sysfleet on Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.92 3.77-3.92 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.9h2.78l-.45 2.91h-2.33v7.03C18.34 21.24 22 17.08 22 12.06z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AI Workflow Automation</a></li>
+          <li><a href="#services">AI Agents &amp; Assistants</a></li>
+          <li><a href="#services">Custom Software</a></li>
+          <li><a href="#services">Systems Integration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why Sysfleet</a></li>
+          <li><a href="#founder">Founder</a></li>
+          <li><a href="#recognition">Credentials</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:contactus@sysfleets.com">contactus@sysfleets.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr">2026</span> Sysfleet Tech Solutions. All rights reserved. · 403, 5th Street, Lynchburg, VA 24504</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var menuBtn = document.getElementById('menuBtn');
+  var navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', function(){ navLinks.classList.toggle('open'); });
+  navLinks.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') navLinks.classList.remove('open');
+  });
+
+  var form = document.getElementById('contactForm');
+  var msg  = document.getElementById('formMsg');
+  var btn  = form.querySelector('button[type="submit"]');
+
+  function show(text, ok){
+    msg.textContent = text;
+    msg.style.display = 'block';
+    msg.style.background = ok ? '#e6f7ee' : '#fdeaea';
+    msg.style.color      = ok ? '#0f7a48' : '#b3261e';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var required = ['name','email','message'];
+    for (var i = 0; i < required.length; i++){
+      var el = document.getElementById(required[i]);
+      if (!el.value.trim() || (el.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value))){
+        el.focus();
+        el.style.borderColor = '#d94848';
+        return;
+      }
+      el.style.borderColor = '';
+    }
+
+    btn.disabled = true;
+    var label = btn.textContent;
+    btn.textContent = 'Sending…';
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if (data.success){
+        show("Thanks — your request has been received. We'll be in touch within one business day.", true);
+        form.reset();
+      } else {
+        show('Something went wrong sending your message. Please email contactus@sysfleets.com directly.', false);
+      }
+    })
+    .catch(function(){
+      show('Something went wrong sending your message. Please email contactus@sysfleets.com directly.', false);
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.textContent = label;
+    });
+  });
+</script>
+</body>
+</html>
