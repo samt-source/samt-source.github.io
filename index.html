@@ -322,6 +322,11 @@ footer p{color:rgba(255,255,255,.55);font-size:.92rem;margin-top:14px;max-width:
 .creds{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:12px}
 .creds li{display:flex;gap:11px;font-size:.94rem;color:var(--muted)}
 .creds .tick{flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:.68rem;font-weight:800;margin-top:4px}
+.cert-list{list-style:none;margin-top:10px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px}
+.cert-list li{display:block;font-size:.9rem;color:var(--muted);padding-left:15px;position:relative;line-height:1.5}
+.cert-list li:before{content:"";position:absolute;left:0;top:.58em;width:6px;height:6px;border-radius:50%;background:#b7c6d8}
+.cert-list span{color:#8b9aad}
+@media(max-width:900px){.cert-list{grid-template-columns:1fr}}
 
 /* Case studies */
 .case{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column}
@@ -613,8 +618,17 @@ footer p{color:rgba(255,255,255,.55);font-size:.92rem;margin-top:14px;max-width:
       <div class="role">Founder &amp; Principal Consultant, Sysfleet Tech Solutions</div>
       <p>Sam Timothy is a Systems Architect with more than a decade of experience delivering enterprise automation, AI, and cross-platform integration solutions across government, healthcare, financial services, and manufacturing. He has led distributed delivery teams across the United States, Canada, South America, and India. His recent engagements include enterprise RPA and AI modernization for a state housing finance authority, health data workflow automation for a state public health department, and a large-scale RPA platform migration for a multinational apparel manufacturer.</p>
       <ul class="creds">
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Education</b> — M.S., Information Systems Engineering &amp; Management, Harrisburg University of Science and Technology, Harrisburg, Pennsylvania, USA (2025)</span></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Certifications</b> — MIT No-Code AI &amp; Machine Learning (2024); Lean Green Belt, Institute of Industrial and Systems Engineers (2024); Professional Scrum Master™ I (2019); Certified Blockchain Expert (2019); ISO/IEC 27001 ISMS Lead Auditor (2018); ITIL® Foundation (2018)</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Education</b> — M.S., Information Systems Engineering &amp; Management, Harrisburg University of Science and Technology, Harrisburg, Pennsylvania, USA</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Certifications</b>
+          <ul class="cert-list">
+            <li>MIT No-Code AI &amp; Machine Learning <span>· 2024</span></li>
+            <li>Lean Green Belt, Institute of Industrial and Systems Engineers <span>· 2024</span></li>
+            <li>Professional Scrum Master™ I <span>· 2019</span></li>
+            <li>Certified Blockchain Expert <span>· 2019</span></li>
+            <li>ISO/IEC 27001 ISMS Lead Auditor <span>· 2018</span></li>
+            <li>ITIL® Foundation <span>· 2018</span></li>
+          </ul>
+        </span></li>
       </ul>
     </div>
   </div>
