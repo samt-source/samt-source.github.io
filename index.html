@@ -148,7 +148,9 @@ section{padding:88px 0}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:1.12rem;letter-spacing:-.02em}
-.logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--navy));display:grid;place-items:center;color:#fff;font-size:.85rem;font-weight:800}
+.logo .mark{width:34px;height:34px;flex:0 0 34px;display:block}
+.logo .mark g{fill:var(--navy);fill-opacity:.55}
+footer .logo .mark g{fill:#fff;fill-opacity:.38}
 .logo small{display:block;font-size:.62rem;font-weight:600;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;line-height:1}
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{font-size:.93rem;font-weight:550;color:#3d4b5c}
@@ -350,7 +352,7 @@ footer p{color:rgba(255,255,255,.55);font-size:.92rem;margin-top:14px;max-width:
 <header>
   <div class="wrap nav">
     <a href="#top" class="logo">
-      <span class="mark">SF</span>
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g><polygon points="14.3,8 1.6,65 50,97 62.9,41.3"/><polygon points="85.7,8 98.4,65 50,97 37.1,41.3"/><polygon points="50,1.7 17.2,49.9 50,97 82.8,49.9"/></g></svg>
       <span>Sysfleet<small>Tech Solutions</small></span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -709,7 +711,7 @@ footer p{color:rgba(255,255,255,.55);font-size:.92rem;margin-top:14px;max-width:
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="#top" class="logo"><span class="mark">SF</span><span>Sysfleet<small>Tech Solutions</small></span></a>
+        <a href="#top" class="logo"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g><polygon points="14.3,8 1.6,65 50,97 62.9,41.3"/><polygon points="85.7,8 98.4,65 50,97 37.1,41.3"/><polygon points="50,1.7 17.2,49.9 50,97 82.8,49.9"/></g></svg><span>Sysfleet<small>Tech Solutions</small></span></a>
         <p>Microsoft Power Platform automation and custom software for organisations that have outgrown spreadsheets and manual processes.</p>
         <ul class="socials" aria-label="Sysfleet on social media">
           <li><a href="https://www.linkedin.com/company/sysfleet-tech-solutions" target="_blank" rel="noopener" aria-label="Sysfleet on LinkedIn" title="LinkedIn">
