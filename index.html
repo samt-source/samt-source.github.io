@@ -204,6 +204,18 @@ footer .logo .mark g{fill:#fff;fill-opacity:.38}
 .card p{margin-top:10px;font-size:.95rem}
 .card ul{margin-top:16px;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .card ul li{font-size:.78rem;font-weight:600;color:var(--navy-2);background:#f1f5fa;border:1px solid var(--line);padding:5px 11px;border-radius:99px}
+/* Per-service accent colours */
+#services .card:nth-child(1){--ac:#1e6fd9;--ac-bg:#e7f0fc;--ac-line:#a9c8f0}
+#services .card:nth-child(2){--ac:#0f766e;--ac-bg:#ddf2f0;--ac-line:#93cfc9}
+#services .card:nth-child(3){--ac:#6d4bc7;--ac-bg:#ece7fa;--ac-line:#c0aeee}
+#services .card:nth-child(4){--ac:#b45309;--ac-bg:#fcefdc;--ac-line:#ecc38c}
+#services .card:nth-child(5){--ac:#15803d;--ac-bg:#e3f4e8;--ac-line:#9fd4b0}
+#services .card:nth-child(6){--ac:#a8386b;--ac-bg:#fae8f0;--ac-line:#e2a7c1}
+#services .card .ic{background:var(--ac-bg);color:var(--ac)}
+#services .card .stack{color:var(--ac)}
+#services .card:hover{border-color:var(--ac-line)}
+#services .card ul li{background:var(--ac-bg);border-color:var(--ac-line)}
+
 .plain{margin-top:12px;font-size:1rem;color:var(--ink);font-weight:550;line-height:1.55}
 .stack{margin-top:10px;font-size:.79rem;font-weight:700;color:var(--blue);letter-spacing:.03em}
 .card .detail{margin-top:10px;font-size:.92rem;color:var(--muted)}
