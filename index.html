@@ -221,10 +221,7 @@ footer .logo .mark g{fill:#fff;fill-opacity:.38}
 .card .detail{margin-top:10px;font-size:.92rem;color:var(--muted)}
 
 /* Fit band */
-.fit{padding:62px 0;border-bottom:1px solid var(--line);
-  background-color:var(--bg-tint);
-  background-image:linear-gradient(rgba(244,247,252,.82),rgba(244,247,252,.82)),url("fit-bg.webp");
-  background-size:cover;background-position:center;background-repeat:no-repeat}
+.fit{padding:62px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fit-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:start}
 .fit h2{font-size:1.55rem}
 .fit-grid > div > p{margin-top:14px;font-size:1rem}
@@ -271,7 +268,7 @@ footer .logo .mark g{fill:#fff;fill-opacity:.38}
 
 /* Same lattice, inverted, on the tinted alternating sections.
    A soft vertical gradient stops the tint reading as a flat grey slab. */
-.alt{
+.alt,.fit{
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%230b2545' stroke-opacity='0.045' stroke-width='1'%3E%3Cpath d='M0 30h120M0 90h120M30 0v120M90 0v120'/%3E%3C/g%3E%3Cg fill='%231e6fd9' fill-opacity='0.09'%3E%3Ccircle cx='30' cy='30' r='2.2'/%3E%3Ccircle cx='90' cy='90' r='2.2'/%3E%3C/g%3E%3C/svg%3E"),
     linear-gradient(180deg,#f3f7fc 0%,var(--bg-alt) 55%,#e9f0f8 100%)}
@@ -286,8 +283,8 @@ footer .logo .mark g{fill:#fff;fill-opacity:.38}
 
 /* Hairline accent along the top edge of each tinted band — a crisp edge reads
    as a deliberate section break rather than a colour that drifted. */
-.alt,#founder,.contact{position:relative}
-.alt::before,#founder::before,.contact::before{
+.alt,.fit,#founder,.contact{position:relative}
+.alt::before,.fit::before,#founder::before,.contact::before{
   content:"";position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,var(--blue),rgba(30,111,217,.14) 38%,transparent 72%)}
 .contact h2,.contact h3{color:#fff}
